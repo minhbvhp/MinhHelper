@@ -24,7 +24,7 @@ namespace MinhHelper
             }
              
 
-            return result.RemoveInPlaceCharArray();
+            return result.RemoveRedundantWhitespaces();
         }        
 
         private static Tuple<long, long> SplitDecimalPoint(decimal inputNumber)
