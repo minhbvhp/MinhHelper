@@ -43,46 +43,9 @@
   <ItemGroup>
     <Compile Include="CurrencyHelper.cs" />
     <Compile Include="CurrencyUnit.cs" />
-    <Compile Include="MinhHelper.nUnitTests\CurrencyHelperTests.cs" />
-    <Compile Include="MinhHelper.nUnitTests\obj\Debug\net46\.NETFramework,Version=v4.6.AssemblyAttributes.cs" />
-    <Compile Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.AssemblyInfo.cs" />
-    <Compile Include="MinhHelper.nUnitTests\StringHelperTests.cs" />
     <Compile Include="NationalCurrency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringHelper.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="MinhHelper.nUnitTests\bin\Debug\net46\nunit_random_seed.tmp" />
-    <None Include="MinhHelper.nUnitTests\MinhHelper.nUnitTests.csproj" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.AssemblyInfoInputs.cache" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.assets.cache" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.csproj.AssemblyReference.cache" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.csproj.BuildWithSkipAnalyzers" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.csproj.CopyComplete" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.csproj.CoreCompileInputs.cache" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.csproj.SuggestedBindingRedirects.cache" />
-    <None Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.GeneratedMSBuildEditorConfig.editorconfig" />
-    <None Include="MinhHelper.nUnitTests\obj\MinhHelper.nUnitTests.csproj.nuget.dgspec.json" />
-    <None Include="MinhHelper.nUnitTests\obj\MinhHelper.nUnitTests.csproj.nuget.g.props" />
-    <None Include="MinhHelper.nUnitTests\obj\MinhHelper.nUnitTests.csproj.nuget.g.targets" />
-    <None Include="MinhHelper.nUnitTests\obj\project.assets.json" />
-    <None Include="MinhHelper.nUnitTests\obj\project.nuget.cache" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\Microsoft.VisualStudio.CodeCoverage.Shim.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\MinhHelper.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\MinhHelper.nUnitTests.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\MinhHelper.nUnitTests.pdb" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\MinhHelper.pdb" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\Mono.Cecil.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\nunit.engine.api.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\nunit.engine.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\nunit.framework.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\NUnit3.TestAdapter.dll" />
-    <Content Include="MinhHelper.nUnitTests\bin\Debug\net46\NUnit3.TestAdapter.pdb" />
-    <Content Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.csproj.FileListAbsolute.txt" />
-    <Content Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.dll" />
-    <Content Include="MinhHelper.nUnitTests\obj\Debug\net46\MinhHelper.nUnitTests.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
