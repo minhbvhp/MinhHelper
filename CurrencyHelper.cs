@@ -5,7 +5,28 @@ namespace MinhHelper
 {
     public class CurrencyHelper
     {
-        public static string NumberToWords(decimal inputNumber, NationalCurrency nationalCurrency)
+        public static string NumberToWordsEN(decimal inputNumber, NationalCurrency nationalCurrency)
+        {
+            var number = SplitDecimalPoint(inputNumber);
+            var currencyUnit = new CurrencyUnit(nationalCurrency);
+
+            string firstPart = LongToString(number.Item1);
+            string secondPart = LongToString(number.Item2);
+            string result = "";
+
+            if (String.IsNullOrEmpty(secondPart) || String.IsNullOrWhiteSpace(secondPart) || secondPart == "zero")
+            {
+                result = firstPart + currencyUnit.UnitEN;
+            }
+            else
+            {
+                result = firstPart + currencyUnit.UnitEN + " and " + secondPart + currencyUnit.SubsidiaryEN;
+            }
+
+            return result.RemoveRedundantWhitespaces();
+        }
+
+        public static string NumberToWordsVI(decimal inputNumber, NationalCurrency nationalCurrency)
         {
             var number = SplitDecimalPoint(inputNumber);
             var currencyUnit = new CurrencyUnit(nationalCurrency);
@@ -22,8 +43,7 @@ namespace MinhHelper
             {
                 result = firstPart + currencyUnit.Unit + " và " + secondPart + currencyUnit.Subsidiary + currencyUnit.Suffix;
             }
-             
-
+            
             return result.RemoveRedundantWhitespaces();
         }        
 
@@ -145,6 +165,55 @@ namespace MinhHelper
                 if (number[0] == '0' || number[0] == '5') return cs[(int)number[0] - 48];
 
             return doc;
+        }
+
+        private static string LongToString(long inputNumber)
+        {
+            if (inputNumber == 0)
+                return "zero";
+
+            if (inputNumber < 0)
+                return "minus " + LongToString(Math.Abs(inputNumber));
+
+            string words = "";
+
+            if ((inputNumber / 1000000) > 0)
+            {
+                words += LongToString(inputNumber / 1000000) + " million ";
+                inputNumber %= 1000000;
+            }
+
+            if ((inputNumber / 1000) > 0)
+            {
+                words += LongToString(inputNumber / 1000) + " thousand ";
+                inputNumber %= 1000;
+            }
+
+            if ((inputNumber / 100) > 0)
+            {
+                words += LongToString(inputNumber / 100) + " hundred ";
+                inputNumber %= 100;
+            }
+
+            if (inputNumber > 0)
+            {
+                if (words != "")
+                    words += "and ";
+
+                var unitsMap = new[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+                var tensMap = new[] { "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+
+                if (inputNumber < 20)
+                    words += unitsMap[inputNumber];
+                else
+                {
+                    words += tensMap[inputNumber / 10];
+                    if ((inputNumber % 10) > 0)
+                        words += "-" + unitsMap[inputNumber % 10];
+                }
+            }
+
+            return words;
         }
 
     }

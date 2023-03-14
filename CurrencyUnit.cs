@@ -30,6 +30,36 @@ namespace MinhHelper
             }
         }
 
+        public string UnitEN
+        {
+            get
+            {
+                switch (nationalCurrency)
+                {
+                    case NationalCurrency.USD:
+                        return " Dollars ";
+
+                    default:
+                        return " Vietnamese dongs ";
+                }
+            }
+        }
+
+        public string SubsidiaryEN
+        {
+            get
+            {
+                switch (nationalCurrency)
+                {
+                    case NationalCurrency.USD:
+                        return " cent ";
+
+                    default:
+                        return " ";
+                }
+            }
+        }
+
         public string Subsidiary
         {
             get
