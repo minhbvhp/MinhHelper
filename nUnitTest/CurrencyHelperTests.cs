@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MinhHelper;
-using System;
 
 namespace nUnitTest
 {
