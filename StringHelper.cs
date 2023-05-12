@@ -4,7 +4,10 @@
     {
         public static string RemoveRedundantWhitespaces(this string input)
         {
-            return System.Text.RegularExpressions.Regex.Replace(input.Trim(), @"\s+", " ");
+            if (!String.IsNullOrEmpty(input) && !String.IsNullOrWhiteSpace(input))
+                return System.Text.RegularExpressions.Regex.Replace(input.Trim(), @"\s+", " ");
+
+            return null;
         }
 
     }
