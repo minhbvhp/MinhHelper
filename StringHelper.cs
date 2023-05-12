@@ -1,4 +1,6 @@
-﻿namespace MinhHelper
+﻿using System;
+
+namespace MinhHelper
 {
     public static class StringHelper
     {
