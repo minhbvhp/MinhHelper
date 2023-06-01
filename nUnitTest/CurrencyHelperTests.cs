@@ -14,7 +14,7 @@ namespace nUnitTest
             decimal input2 = 2100;
             decimal input3 = 2100;
             long input4 = 500000;
-            long input5 = 505000;
+            long input5 = 305122553;
 
 
             //Act
@@ -47,7 +47,7 @@ namespace nUnitTest
             decimal input2 = 2100;
             decimal input3 = 2100;
             long input4 = 5213455;
-            decimal input5 = 5254.25M;
+            decimal input5 = 305122553;
 
 
             //Act
@@ -55,7 +55,7 @@ namespace nUnitTest
             var Test2 = CurrencyHelper.NumberToWordsEN(input2, NationalCurrency.USD);
             var Test3 = CurrencyHelper.NumberToWordsEN(input3, NationalCurrency.VND);
             var Test4 = CurrencyHelper.NumberToWordsEN(input4, NationalCurrency.VND);
-            var Test5 = CurrencyHelper.NumberToWordsEN(input5, NationalCurrency.USD);
+            var Test5 = CurrencyHelper.NumberToWordsEN(input5, NationalCurrency.VND);
 
             //Assert
             string Result1 = "five hundred and twelve thousand one hundred and twenty-one Dollars and fifteen cent";
